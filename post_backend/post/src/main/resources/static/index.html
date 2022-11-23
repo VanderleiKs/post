@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+<h1>Posts</h1>
+
+<table id="list-table">
+    <thead>
+    <th>
+    <td>ID</td>
+    <td>ASSUNTO</td>
+    <td>TEXTO</td>
+    </th>
+    </thead>
+    <tbody>
+    </tbody>
+
+    <script>
+      fetch("http://localhost:8080/posts").then((x) =>
+       x.json().then((c) => {
+            c.forEach(element => {
+                const row = document.createElement('tr')
+                row.innerHTML = `<td>${element.id}</td> <td>${element.topic}</td> <td>${element.text}</td>`
+                document.querySelector('#list-table>tbody').appendChild(row)
+        })})
+      );
+    </script>
+
+</table>
+</body>
+</html>

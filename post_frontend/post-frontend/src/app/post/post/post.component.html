@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="button-container">
+    <button
+      mat-raised-button
+      class="btn btn-success btn-lg"
+      (click)="openDialog('500ms', '500ms')"
+    >
+      Novo Post
+    </button>
+  </div>
+  <div class="card-container">
+    <div class="card" *ngFor="let post of data">
+      <h2>Assunto: {{ post.topic }}</h2>
+      <p>{{ post.text }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Novo Post</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="post">
+    <mat-form-field class="input-full-width" appearance="fill">
+      <mat-label>Assunto</mat-label>
+      <input
+        matInput
+        [class.is-invalid]="topic.invalid && topic.touched"
+        formControlName="topic"
+        cdkFocusInitial
+        placeholder="Ex. Economia"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-full-width" appearance="fill">
+      <mat-label>Texto do Post</mat-label>
+      <textarea
+        [class.is-invalid]="text.invalid && text.touched"
+        formControlName="text"
+        matInput
+        placeholder="Ex. Escreva aqui seu post."
+      ></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="buttons-container">
+  <button mat-button mat-dialog-close class="btn btn-danger">Cancelar</button>
+  <button
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    class="btn btn-success"
+    [disabled]="topic.invalid || text.invalid"
+    (click)="insertNewPost()"
+  >
+    Salvar
+  </button>
+</div>

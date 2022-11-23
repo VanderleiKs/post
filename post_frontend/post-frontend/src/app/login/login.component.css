@@ -1,0 +1,55 @@
+.pag-container{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container{
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    background-color: rgb(227, 233, 235);
+    width: 40rem;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-right: 1rem;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.input-container input{
+    border: none;
+    font-size: medium;
+}
+
+.input-container input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.title-login{
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+form{
+    padding: 2rem;
+}
+
+.button{
+    text-align: right;
+}
+
+
+#view-img{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+

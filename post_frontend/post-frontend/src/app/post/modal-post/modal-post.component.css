@@ -1,0 +1,13 @@
+.input-full-width{
+    width: 100%;
+}
+
+.buttons-container{
+    justify-content: right;
+    gap: 3rem;
+}
+
+.buttons-container button{
+    height: 3rem;
+    width: 8rem;
+}
